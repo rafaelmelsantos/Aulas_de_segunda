@@ -1,1 +1,22 @@
+const { log } = require("console");
+const express = require("express");
 
+const app = express();
+
+app.get('/backend/fecaf',(req, res) =>{
+    console.log("chamaram o nosso endpoint");
+
+    ///resposta para quem chamou o endpoint
+    res.send("jesus morreu");
+})
+
+app.get('/nome',(req, res) => {
+    console.log("chamaram o nome");
+
+    res.send("rafael mel")
+    
+})
+
+app.listen(3000, () => {
+    console.log("o server esta on na porta 3000");
+})
